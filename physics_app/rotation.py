@@ -16,26 +16,30 @@ from kivy.graphics.instructions import *
 from kivy.uix.screenmanager import ScreenManager, Screen
 
 from config_projectile import *
+from kivy.lang import Builder
+
+
+# Builder.load_file('physics.kv')
 
 
 line_points=[0,0,200,200]
 # Line(points=line_points, group='arrows')
 
+
 class Arrow1(Widget):
     def __init__(self, **kwargs):
         super(Arrow1, self).__init__(**kwargs)
-        # self._points = line_points
-
-    @property
-    def points(self):
-        return self._points
-
+        # self.points = line_points
+        # return Line(points=line_points)
 
 
 class RotationApp(App):
-	def build(self):
-		arrow1 = ObjectProperty(None)
 
+	arrow1 = ObjectProperty(None)
+	def build(self):
+		# arrow1 = Arrow1()
+		# arrow1 = ObjectProperty(None)
+		return Arrow1()
 
 
 if __name__ == "__main__":
