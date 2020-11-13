@@ -111,4 +111,4 @@ if __name__ == "__main__":
             a.start(self.line)
 
     float_layout = MainWindow()
-    Spokes(float_layout)
+    runTouchApp(float_layout)
