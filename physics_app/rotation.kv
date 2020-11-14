@@ -1,10 +1,36 @@
-<Arrow1>:
+<Spoke>:
 	canvas:
 		Line:
-			points: [0,0,200,200]
-			width: 10
+			points: self.line_points
+			width: 1
 		Color:
 			rgb: 0.5, 0.5, 0.5
-	Label:
-		text: 'Hi-------------------------'
+
+Wheel:
+	canvas:	
+		Ellipse:
+			size: self.size
+	        pos: self.pos
+		Color:
+			rgb: 0.5, 0.5, 0.5
+
+<CompleteWheel>:
+	spoke: wheel_spoke
+	wheel: round_wheel
+
+	Spoke:
+		id: wheel_spoke
+	Wheel:
+		id: round_wheel
+
+
+
+
+
+
+
+
+
+
+
 
